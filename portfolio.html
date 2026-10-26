@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abram S. Alfaro</title>
+    <link rel="icon" type="image/png" href="Career2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <a href="#main" class="name">Abram S. Alfaro</a>
+
+            <!-- Hamburger Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Academic Projects</a></li>
+                <li><a href="#experience">Professional Experience</a></li>
+                <li><a href="#education">Educational Background</a></li>
+                <li><a href="#toolsskills">Tools & Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="main" class="section">
+            <div class="hero-content">
+                <!-- Left side: Picture -->
+                <div class="hero-image">
+                    <img src="abram.jpg" alt="Abram Alfaro Portrait">
+                </div>
+                <!-- Right side: Text -->
+                <div class="hero-text">
+                    <h1 class="heroname">Abram S. Alfaro</h1>
+                    <h3 class="herolatin">Magna Cum Laude Graduate</h3>
+                    <h3 class="herodegree">Bachelor of Science in Computer Science</h3>
+                    <p class="heroschool">Polytechnic University of the Philippines</p>
+                    <div class="hero-buttons">
+                        <a href="Alfaro, Abram_Resume.pdf" download class="btn-primary">Download Resume</a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alfaroabram44@gmail.com" target="_blank" class="btn-primary">Email Me</a>
+                        <a href="https://github.com/ram4209" target="_blank" class="btn-primary">GitHub</a>
+                        <a href="https://linkedin.com/in/abram-alfaro-751063407" target="_blank" class="btn-primary">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="sectionhead">About Me</h2>
+            <p class="abouttext">I'm a Magna Cum Laude Computer Science graduate from the Polytechnic University of the Philippines (PUP), 
+                passionate about software development and problem-solving. Through my game development internship and academic projects, 
+                I've gained hands-on experience in programming, database management, and algorithm design. As a DOST-SEI RA 7687 scholar, 
+                I'm committed to continuous learning and building practical, user-focused solutions.
+            </p>
+            <div class="bringheader">
+                <h3>What I Bring</h3>
+            </div>
+            <div class="whatibring">
+                <div class="bringcard">
+                    <div class="cardlogo">
+                        <img src="Software2.png" alt="Software Icon">
+                    </div>
+                    <h3>Software & Web Development</h3>
+                    <p>I have developed web applications and software systems through academic projects, gaining exposure to databases, 
+                        algorithms, and user-focused design.</p>
+                </div>
+
+                <div class="bringcard">
+                    <div class="cardlogo">
+                        <img src="Documentation2.png" alt="Document Icon">
+                    </div>
+                    <h3>Technical Documentation</h3>
+                    <p>I have created technical documentation for academic projects, covering algorithms, system processes, and project 
+                        implementations.</p>
+                </div>
+
+                <div class="bringcard">
+                    <div class="cardlogo">
+                        <img src="Game2.png" alt="Video Game Icon">
+                    </div>
+                    <h3>Video Game Development</h3>
+                    <p>I gained exposure to video game development through a hands-on internship, working with gameplay mechanics, game logic, 
+                        and multimedia elements.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="sectionhead">Academic Projects</h2>
+            <div class="projects-carousel-wrapper">
+                <!-- Left Arrow Button -->
+                <button class="carousel-btn prev-btn" onclick="scrollProjects(-1)">&#10094;</button>
+                
+                <!-- Horizontal Scroll Track -->
+                <div class="projects-track" id="projectsTrack">
+                    
+                    <!-- Project 1: Thesis -->
+                    <div class="project-card full-slide">
+                        <div class="project-info">
+                            <h3>Hybrid PSO-ACO Logistics Optimization System</h3>
+                            <p class="project-tech">Thesis | Python, HTML, CSS | June — December 2025</p>
+                            <p>Developed a hybrid optimization system combining Particle Swarm Optimization (PSO) and 
+                                Ant Colony Optimization (ACO) to improve 3D loading and unloading efficiency in delivery vehicles, 
+                                addressing real-world logistics constraints such as space utilization and delivery sequencing.</p>
+                            <ul class="bulletlist">
+                                <li>Designed and implemented a hybrid PSO-ACO algorithm to optimize both volume utilization and unloading 
+                                efficiency by minimizing relocation count.</li>
+                                <li>Built a simulation-based web application to evaluate algorithm performance across varying package sizes and 
+                                vehicle capacities using real-world datasets.</li>
+                                <li>Conducted comparative analysis against standalone PSO and ACO, measuring scalability through computation 
+                                time and memory usage.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1x_a0eRRtfUS4oP5fEbHqYr2EKhcyhmXG/view?usp=sharing" target="_blank" class="btn-primary">Thesis Manuscript</a>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ya9nOiiqXz4?si=HMAjzhngvk6vbm8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: JARGEN -->
+                    <div class="project-card full-slide">
+                        <div class="project-info">
+                            <h3>JARGEN</h3>
+                            <p class="project-tech">Principles of Programming Languages | Python, HTML, CSS | September 2024 — January 2025</p>
+                            <p>Developed JARGEN, a personalized programming language for Generation Z Programmers. Inspired by Python 
+                                and JavaScript, it takes advantage of the strengths of both languages while offering syntax catered towards 
+                                Gen Z Coders.</p>
+                            <ul class="bulletlist">
+                                <li>Programmed JARGEN's lexical and syntax analyzer with error detection for a smooth programming experience.</li>
+                                <li>Developed a web-based user interface for easy testing of code for JARGEN's lexical and syntax analyzer.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ram4209/JARGEN.git" target="_blank" class="btn-primary">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tXiwYV4D1j8?si=9huHOYMD-teIspwD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: SSS Database -->
+                    <div class="project-card full-slide">
+                        <div class="project-info">
+                            <h3>SSS Database Management System</h3>
+                            <p class="project-tech">Information Management | MySQL Workbench, Java | February — July 2024</p>
+                            <p>Programmed a Database Management System (DBMS) for the Social Security System (SSS). The DBMS aimed to 
+                                create a smooth registration process for SSS users and beneficiaries.</p>
+                            <ul class="bulletlist">
+                                <li>Straightforward registration form interface with easy-to-understand input fields.</li>
+                                <li>Includes basic Create, Read, Update and Delete (CRUD) system design for database management connected 
+                                    to MySQL Workbench.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ram4209/SSS-Database.git" target="_blank" class="btn-primary">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/IxhCi1gwdGs?si=t_3bgHAV8MjgZq1x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: BagEats  -->
+                    <div class="project-card full-slide">
+                        <div class="project-info">
+                            <h3>BagEats</h3>
+                            <p class="project-tech">Design and Analysis of Algorithms | Python, HTML, CSS | February — July 2024</p>
+                            <p>Designed a Food Recommendation System for Polytechnic University of the Philippines (PUP) students titled 
+                                BagEats. The recommender system is    tailored towards the university's personnel making use of food data 
+                                coming from actual food stalls found inside the PUP Main Campus.</p>
+                            <ul class="bulletlist">
+                                <li>Implemented the Knapsack Algorithm as the backbone of the Food Recommendation System.</li>
+                                <li>Web-based user interface offering high customizability of food recommendations such as 
+                                    nutritional preferences and allergen avoidance.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ram4209/Bag-Eats.git" target="_blank" class="btn-primary">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KObeKxzKgTk?si=VIRYUtyYU2PdEAkR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Bato-Bato Pick   -->
+                    <div class="project-card full-slide">
+                        <div class="project-info">
+                            <h3>Bato-Bato Pick</h3>
+                            <p class="project-tech">Automata and Language Theory | JavaScript, HTML, CSS | June 2025</p>
+                            <p>Developed a bato-bato pick (rock-paper-scissors) inspired card game with added power-up mechanics as a 
+                                web application, enhancing traditional gameplay with strategy elements.</p>
+                            <ul class="bulletlist">
+                                <li>Designed and implemented card-based power-up features (fire, water, lightning) to introduce variety and 
+                                    competitive depth.</li>
+                                <li>Built a web-based interface for interactive and user-friendly gameplay.</li>
+                                <li>Applied fundamental concepts of game logic and algorithm design to ensure fair and engaging matches.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ram4209/AI-Card-Game.git" target="_blank" class="btn-primary">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cnmkne8rqoc?si=w4WaohcCGqHlDXBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: OOPtify    -->
+                    <div class="project-card full-slide">
+                        <div class="project-info">
+                            <h3>OOPtify</h3>
+                            <p class="project-tech">Object-Oriented Programming | Java, Microsoft Access | January 2024</p>
+                            <p>Developed a Java-based desktop application integrated with a Microsoft Access database containing Spotify data, 
+                                designed to demonstrate object-oriented programming principles.</p>
+                            <ul class="bulletlist">
+                                <li>Implemented OOP concepts such as inheritance, polymorphism, and encapsulation in the application's structure.</li>
+                                <li>Connected the system to a Microsoft Access database for storing, retrieving, and managing Spotify-related data.</li>
+                                <li>Designed a GUI in Java Swing to allow users to interact with the application easily.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ram4209/ooptify-gui.git" target="_blank" class="btn-primary">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AWeR1cAh5tE?si=1J6AeV8eIAxdlFuj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Arrow Button -->
+                <button class="carousel-btn next-btn" onclick="scrollProjects(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="sectionhead">Professional Experience</h2>
+            <div class="projects-carousel-wrapper">
+                <div class="project-card full-slide">
+                    <div class="project-info">
+                        <h3>Game Developer Intern - Lamina Studios </h3>
+                        <p class="project-tech">Internship | C#, Unity | July — August 2025</p>
+                        <p>Gained hands-on experience in game development by contributing to the design, programming, and testing of a 
+                            horror video game project. Applied technical skills in Unity and C# to implement gameplay features, 
+                            improve visuals, and enhance player experience.</p>
+                        <ul class="bulletlist">
+                            <li>Developed gameplay mechanics (first-person controls, collectibles, triggers, AI enemy behavior) in Unity.</li>
+                            <li>Designed and implemented UI elements including main menu, pause menu, settings, objectives, and game-over screens.</li>
+                            <li>Enhanced visuals through lighting, post-processing, animations, and particle systems.</li>
+                            <li>Integrated audio effects and ambient sounds to improve player immersion.</li>
+                            <li>Assisted in scene sequencing, environment design, and final build testing for a fully playable horror game.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1jfMqaJTu-jr9x-jJablnYOmifcO6kSlF?usp=sharing" target="_blank" class="btn-primary">Final Output</a>
+                            <a href="https://drive.google.com/file/d/1DuCflhna3k4wQGbgJpAWqGcsCG4Rm36J/view?usp=sharing" target="_blank" class="btn-primary">Certificate of Completion</a>
+                        </div>
+                    </div>
+                    <div class="project-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HRuYwJTSokU?si=GizzvKcDRVJBEMGG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="sectionhead">Educational Background</h2>
+            <div class="educationsection">
+                <div class="educationlevel-pup">
+                    <div class="schoollogo">
+                        <img src="PUP.png" alt="PUP Logo">
+                    </div>
+                    <h3>Polytechnic University of the Philippines</h3>
+                    <p class="subhead">Tertiary Education | 2022 — 2026</p>
+                    <div class="educationlist">
+                        <p>Magna Cum Laude</p>
+                        <p>Bachelor of Science in Computer Science (BSCS)</p>
+                        <p>DOST-SEI RA 7687 Undergraduate Scholar</p>
+                        <p>Consistent President's Lister</p>
+                        <p>GWA: 1.22</p>
+                    </div>
+                    <div class="latinaward">
+                        <a href="https://drive.google.com/file/d/11dbIzyr0AHGdiEXks3K3xeB5__Imkvur/view?usp=sharing" target="_blank" class="btn-primary">Latin Award</a>
+                    </div>
+                </div>
+
+                <div class="educationlevel-adamson">
+                    <div class="schoollogo">
+                        <img src="Adamson.png" alt="Adamson University Logo">
+                    </div>
+                    <h3>Adamson University</h3>
+                    <p class="subhead">Secondary Education - Senior High School | 2020 — 2022</p>
+                    <div class="educationlist">
+                        <p>STEM - Technology Strand</p>
+                        <p>Top Graduate of STEM - Technology Strand</p>
+                        <p>With High Honors</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="toolsskills" class="section">
+            <h2 class="sectionhead">Tools & Skills</h2>
+            <div class="toolssection">
+                <div class="tools tools-programming">
+                    <h3>Programming Languages</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="C.png" alt="C Logo">
+                            <p>C</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Csharp.png" alt="C# Logo">
+                            <p>C#</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Java.png" alt="Java Logo">
+                            <p>Java</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Python.png" alt="Python Logo">
+                            <p>Python</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools tools-markup">
+                    <h3>Markup Languages</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="HTML.png" alt="HTML Logo">
+                            <p>HTML</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="CSS.png" alt="CSS Logo">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools tools-database">
+                    <h3>Database Management</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="SQL.png" alt="SQL Logo">
+                            <p>SQL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolssection">
+                <div class="tools tools-development">
+                    <h3>Development Tools</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="VS Code.png" alt="VS Code Logo">
+                            <p>Visual Studio Code</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Github1.png" alt="GitHub Logo">
+                            <p>GitHub</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools tools-multimedia">
+                    <h3>Multimedia Tools</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="Figma.png" alt="Figma Logo">
+                            <p>Figma</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Canva.png" alt="Canva Logo">
+                            <p>Canva</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Photoshop.png" alt="Photoshop Logo">
+                            <p>Adobe Potoshop</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Premiere.png" alt="Premiere Logo">
+                            <p>Adobe Premiere Pro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolssection">
+                <div class="tools tools-productivity">
+                    <h3>Productivity Tools</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="Word.png" alt="Word Logo">
+                            <p>Microsoft Word</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Powerpoint.png" alt="Powerpoint Logo">
+                            <p>Microsoft Powerpoint</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Excel.png" alt="Excel Logo">
+                            <p>Microsoft Excel</p>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <img src="Drive.png" alt="Drive Logo">
+                            <p>Google Drive</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Docs.png" alt="Docs Logo">
+                            <p>Google Docs</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Slides.png" alt="Slides Logo">
+                            <p>Google Slides</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Sheets.png" alt="Sheets Logo">
+                            <p>Google Sheets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolssection">
+                <div class="tools tools-skills">
+                    <h3>Soft Skills</h3>
+                    <div class="tools-row">
+                        <div class="tool-item">
+                            <img src="Leadership2.png" alt="Leadership Icon">
+                            <p>Leadership</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Creativity2.png" alt="Creativity Icon">
+                            <p>Creativity</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Teamwork2.png" alt="Teamwork Icon">
+                            <p>Teamwork</p>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <img src="TimeManagement2.png" alt="Time Management Icon">
+                            <p>Time Management</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="Organized2.png" alt="Organized Icon">
+                            <p>Organized</p>
+                        </div>
+
+                        <div class="tool-item">
+                            <img src="CriticalThinking2.png" alt="Critical Thinking Icon">
+                            <p>Critical Thinker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="contact" class="section">
+        <h2 class="sectionhead">Let's Connect</h2>
+        <p class="contact-details">
+            <span class="contact-item">alfaroabram44@gmail.com</span>
+            <span class="divider">|</span>
+            <span class="contact-item">(TM) 0975 506 2270</span>
+            <span class="divider">|</span>
+            <span class="contact-item">(SMART) 0939 723 5687</span>
+        </p>
+    </footer>
+
+    <script>
+    function updateCarouselHeight() {
+        const track = document.getElementById('projectsTrack');
+        const slides = track.querySelectorAll('.project-card.full-slide');
+        
+        // Only run dynamic height logic on mobile view (max-width: 768px)
+        if (window.innerWidth <= 768) {
+            // Find which slide is currently most visible in view
+            slides.forEach(slide => {
+                const rect = slide.getBoundingClientRect();
+                const trackRect = track.getBoundingClientRect();
+                // Check if the slide is roughly centered in the carousel view
+                if (rect.left >= trackRect.left - 50 && rect.left < trackRect.left + trackRect.width / 2) {
+                    track.style.height = slide.offsetHeight + 'px';
+                }
+            });
+        } else {
+            track.style.height = 'auto'; // Reset for desktop
+        }
+    }
+
+    function scrollProjects(direction) {
+        const track = document.getElementById('projectsTrack');
+        const cardWidth = track.clientWidth; 
+        track.scrollBy({
+            left: direction * cardWidth,
+            behavior: 'smooth'
+        });
+        
+        // Delay height adjustment slightly to let the smooth scroll finish positioning
+        setTimeout(updateCarouselHeight, 350);
+    }
+
+    // Recalculate on load, resize, or manual scroll/swipe
+    window.addEventListener('load', updateCarouselHeight);
+    window.addEventListener('resize', updateCarouselHeight);
+    document.getElementById('projectsTrack').addEventListener('scroll', () => {
+        requestAnimationFrame(updateCarouselHeight);
+    });
+
+    // 2. Responsive Hamburger Menu Functionality
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+    </script>
+
+</body>
+</html>

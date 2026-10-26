@@ -1,0 +1,1127 @@
+/* 1. Make the scrolling smooth across the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset basic margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #000000;
+}
+
+/* 2. Style and stick the Navigation Bar to the top horizontally */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffb700;
+    /* border-bottom: 1px solid #ddd; */
+    z-index: 1000; /* Keeps the navbar on top of other elements when scrolling */
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.name {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.name:hover {
+    color: #ffffff;
+}
+
+/* Make the list items align horizontally using Flexbox */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem; /* Adds breathing room around the text */
+    border-radius: 4px;   /* Rounds the corners of the background */
+    transition: color 0.2s ease, background-color 0.2s ease; /* Makes the transition smooth */
+}
+
+.nav-links a:hover {
+    color: #ffb700; /* Darkens text slightly when hovered */
+    background-color: #000000;    /* Light gray background color on hover */
+}
+
+/* --- Hamburger Button Styles (Hidden on Desktop) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Mobile View Media Query --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show hamburger button on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffb700;
+        padding: 1.5rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    /* Class added via JavaScript to show the menu */
+    .nav-links.active {
+        display: flex; 
+    }
+}
+
+/* 3. Give sections height so you can see the scrolling effect */
+.section {
+    /* padding: 5rem 2rem; */
+    scroll-margin-top: 85px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.sectionhead {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffb700;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; /* Forces each section to take up full screen height */
+}
+
+/* Layout for the Hero content (Text + Image side-by-side) */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;              /* Adjust this gap to control space between image & text */
+    /* max-width: 1100px;      Ensures it stays within a neat container */
+    margin: 0 auto;         /* Centers the entire block horizontally */
+    /* width: 100%; */
+}
+
+.hero-text {
+    flex: 1; /* Takes up available space */
+}
+
+/* Make your name large and prominent */
+.heroname {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+}
+
+/* Make "Magna Cum Laude" stand out */
+.herolatin {
+    font-size: 1.85rem;
+    font-weight: 750;
+    color: #ffb700; /* Optional: gives it a nice professional blue accent, or change to #333 for dark text */
+    margin-bottom: 0.25rem;
+}
+
+/* Degree subtitle */
+.herodegree {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.15rem;
+}
+
+/* School text */
+.heroschool {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for your profile picture */
+.hero-image img {
+    width: 400px;          /* Sets the width of the image */
+    height: 450px;         /* Sets the height to match for a circle */
+    object-fit: cover;     /* Prevents the image from looking stretched */
+    border-radius: 20%;    /* Turns the image into a perfect circle */
+    border: 4px solid #fff;/* Optional: Adds a white border ring */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    background-color: #ffb700;
+    color: #000000;
+    font-weight: 700;
+}
+
+.hero-buttons a:hover {
+    background-color: #ffffff;
+    color: #ffb700;
+}
+
+@media (max-width: 768px) {
+    /* --- Main/Hero Section Responsiveness --- */
+    .section#main {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-height: auto; /* Allows height to adapt naturally on mobile */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stacks image on top, text underneath */
+        text-align: center;      /* Centers text for a balanced mobile hero */
+        gap: 2rem;               /* Reduces space between image and text */
+    }
+
+    /* Profile Image Adjustments */
+    .hero-image img {
+        width: 220px;            /* Scaled down for smaller phone screens */
+        height: 220px;
+        border-radius: 50%;      /* Perfect circular shape for mobile profile */
+    }
+
+    /* Hero Text & Typography Adjustments */
+    .heroname {
+        font-size: 2.25rem;      /* Scaled down from 4rem so it doesn't overflow */
+        line-height: 1.2;
+    }
+
+    .herolatin {
+        font-size: 1.3rem;
+    }
+
+    .herodegree {
+        font-size: 1rem;
+    }
+
+    .heroschool {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Hero Buttons Adjustments */
+    .hero-buttons {
+        justify-content: center; /* Centers buttons horizontally */
+        gap: 0.75rem;
+    }
+
+    .hero-buttons .btn-primary {
+        width: 100%;             /* Optional: Full-width buttons for easy tapping */
+        max-width: 280px;
+        text-align: center;
+    }
+}
+
+/* Primary Button Style (Solid fill) */
+.btn-primary {
+    background-color: #ffb700;
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    color: #ffb700;
+}
+
+#about {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.abouttext {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+#about h3 {
+    font-size: 1.5rem;
+    color: #ffb700;
+    /* margin-bottom: 0.5rem; */
+    text-align: center;
+}
+
+.bringheader {
+    background-color: #363636;
+    /* border: 1px solid #ffb700; */
+    padding: .5rem .5rem;
+    width: 32%;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.whatibring {
+    position: relative;
+    display: flex;         /* Places children side-by-side */
+    gap: 2rem;             /* Adds spacing between the two cards */
+    width: 100%;
+    max-width: 1350px;
+    margin: 2rem auto 0;
+}
+
+.bringcard {
+    flex: 1;               /* Makes both cards share the row equally (50% each) */
+    display: flex;
+    flex-direction: column; /* Stacks content inside the card vertically (title -> text -> button) */
+    background: #363636;
+    /* border: 1px solid #e5e7eb; */
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.bringcard h3 {
+    font-size: 1.5rem;
+    color: #ffb700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.bringcard p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cardlogo {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;
+    width: 100%;
+    margin-bottom: .75rem;   /* Adds breathing room below the logo */
+}
+
+.cardlogo img {
+    width: 100px;          /* Sets the width of the image */
+    height: 100px;         /* Sets the height to match for a circle */
+    object-fit: contain;     /* Prevents the image from looking stretched */
+}
+
+@media (max-width: 768px) {
+    /* --- About Me Section Responsiveness --- */
+    #about {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .abouttext {
+        font-size: 1rem;       /* Slightly smaller text for comfortable mobile reading */
+        line-height: 1.6;
+        text-align: center;   /* Or keep text-align: center based on your preference */
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* "What I Bring" Subtitle Box */
+    .bringheader {
+        width: 100%;           /* Allows header banner to scale naturally on phones */
+        max-width: 280px;      /* Keeps it neat and centered */
+        margin: 0 auto;
+    }
+
+    .bringheader h3 {
+        font-size: 1.25rem;
+    }
+
+    /* "What I Bring" Cards Container */
+    .whatibring {
+        flex-direction: column; /* Stacks the three cards vertically */
+        gap: 1.25rem;           /* Adds clean vertical spacing between cards */
+        margin-top: 1.5rem;
+    }
+
+    .bringcard {
+        padding: 1.5rem;        /* Slightly reduced padding inside cards for smaller screens */
+        width: 100%;
+    }
+
+    .bringcard h3 {
+        font-size: 1.25rem;
+    }
+
+    .bringcard p {
+        font-size: 0.95rem;
+    }
+
+    .cardlogo img {
+        width: 80px;            /* Scales down icons slightly for mobile balance */
+        height: 80px;
+    }
+}
+
+#projects {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#projects h2.sectionhead {
+    max-width: 1250px;
+    /* padding-left: 5rem; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Carousel Wrapper */
+.projects-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    margin: 2rem auto 0;
+}
+
+/* Horizontal Track */
+.projects-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    width: 100%;
+}
+
+.projects-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+/* Full Width Project Cards */
+.project-card.full-slide {
+    flex: 0 0 100%; /* Force card to take up 100% of the carousel width */
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: #363636;
+    /* border: 1px solid #e5e7eb; */
+    border-radius: 12px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Left side: Project Text */
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.project-info p.project-tech {
+    font-size: 0.70rem;
+    font-weight: 600;
+    color: #ffb700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.bulletlist {
+    list-style-type: disc;
+    padding-left: 1.75rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.project-links a {
+    margin-right: 1rem;
+}
+
+/* Right side: Embedded Video Container */
+.project-video {
+    flex: 1.2;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintains standard widescreen video ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+
+.project-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Arrow Styling */
+.carousel-btn {
+    background-color: #ffb700;
+    border: 1px solid #000000;
+    color: #000000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #000000;
+    color: #ffb700;
+    border-color: #ffffff;
+}
+
+.prev-btn {
+    left: -24px;
+}
+
+.next-btn {
+    right: -24px;
+}
+
+@media (max-width: 768px) {
+    /* --- Academic Projects Section Responsiveness --- */
+    #projects {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .projects-carousel-wrapper {
+        margin-top: 1.5rem;
+    }
+
+    /* Allow track height to transition smoothly when switching cards */
+    .projects-track {
+        align-items: flex-start;
+        transition: height 0.3s ease; 
+        overflow-y: hidden; /* Prevents unwanted inner vertical scrollbars */
+    }
+
+    #projects h2.sectionhead {
+        font-size: 1.75rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .projects-carousel-wrapper {
+        margin-top: 1.5rem;
+    }
+
+    /* Stack project info and video vertically on mobile */
+    .project-card.full-slide {
+        flex: 0 0 100%;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem;
+        height: auto; /* Lets each card adjust height naturally */
+    }
+
+    .project-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-info p.project-tech {
+        font-size: 0.65rem;
+    }
+
+    .project-info p, 
+    .bulletlist {
+        font-size: 0.9rem;
+        text-align: justify;       /* Left-aligned is easier to read on narrow phone displays */
+    }
+
+    .bulletlist {
+        padding-left: 1.25rem;  /* Prevents bullet points from pushing off-screen */
+        margin-bottom: 1.25rem;
+    }
+
+    /* 1. Make this a relative container so absolute children stay inside */
+    .project-video {
+        order: 1;
+        width: 100%;
+        flex: none;             /* Removes desktop flex sizing */
+    }
+
+    .project-info {
+        order: 2;
+        flex: none;
+        width: 100%;
+    }
+
+    .project-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-links a {
+        margin-right: 0; /* Clear desktop right margin */
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    /* Adjust Carousel Navigation Buttons for Mobile */
+    .carousel-btn {
+        width: 36px;            /* Slightly smaller touch target for mobile */
+        height: 36px;
+        font-size: 1rem;
+        top: 40%;
+    }
+
+    .prev-btn {
+        left: -10px;            /* Pulls arrows slightly closer so they don't clip off small viewports */
+    }
+
+    .next-btn {
+        right: -10px;
+    }
+}
+
+#experience {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#experience h2.sectionhead {
+    max-width: 1250px;
+    /* padding-left: 5rem; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    /* --- Professional Experience Section Responsiveness --- */
+    #experience {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    #experience h2.sectionhead {
+        font-size: 1.75rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Target the experience card container */
+    #experience .project-card.full-slide {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem;
+        height: auto;
+    }
+
+    /* Video reordering for Experience (places video right below the main info header) */
+    #experience .project-video {
+        order: 1;
+        width: 100%;
+        flex: none;
+    }
+
+    #experience .project-info {
+        order: 2;
+        width: 100%;
+        flex: none;
+    }
+
+    #experience .project-info h3 {
+        font-size: 1.25rem;
+    }
+
+    #experience .project-info p.project-tech {
+        font-size: 0.65rem;
+        text-align: center;
+    }
+
+    #experience .project-info p, 
+    #experience .bulletlist {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    #experience .bulletlist {
+        padding-left: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Align action buttons neatly on mobile */
+    #experience .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    #experience .project-links a {
+        margin-right: 0; /* Clear desktop right margin */
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
+
+#education {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.educationsection {
+    position: relative;
+    display: flex;         /* Places children side-by-side */
+    gap: 2rem;             /* Adds spacing between the two cards */
+    width: 100%;
+    max-width: 1350px;
+    margin: 2rem auto 0;
+}
+
+.educationlevel-pup {
+    flex: 1;               /* Makes both cards share the row equally (50% each) */
+    display: flex;
+    flex-direction: column; /* Stacks content inside the card vertically (title -> text -> button) */
+    /* justify-content: space-between; Pushes buttons to the bottom evenly */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('pupcampus.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border: 1px solid #e5e7eb; */
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.educationlevel-pup h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.educationlevel-pup p.subhead {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffb700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.educationlevel-adamson {
+    flex: 1;               /* Makes both cards share the row equally (50% each) */
+    display: flex;
+    flex-direction: column; /* Stacks content inside the card vertically (title -> text -> button) */
+    /* justify-content: space-between; Pushes buttons to the bottom evenly */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('adamsoncampus.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border: 1px solid #e5e7eb; */
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.educationlevel-adamson h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.educationlevel-adamson p.subhead {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffb700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.educationlist {
+    list-style-type: none;
+    font-weight: 550;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+}
+
+.latinaward {
+    margin: 0 auto;
+}
+
+.schoollogo {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;   /* Adds breathing room below the logo */
+}
+
+.schoollogo img {
+    width: 200px;          /* Sets the width of the image */
+    height: 200px;         /* Sets the height to match for a circle */
+    object-fit: contain;     /* Prevents the image from looking stretched */
+}
+
+@media (max-width: 768px) {
+    /* --- Educational Background Section Responsiveness --- */
+    #education {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    #education h2.sectionhead {
+        font-size: 1.75rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Stack PUP and Adamson cards vertically */
+    .educationsection {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Card Padding & Sizing */
+    .educationlevel-pup,
+    .educationlevel-adamson {
+        padding: 1.75rem 1.25rem;
+        width: 100%;
+    }
+
+    /* School Logo Scaling */
+    .schoollogo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Headings & Subheads */
+    .educationlevel-pup h3,
+    .educationlevel-adamson h3 {
+        font-size: 1.25rem;
+    }
+
+    .educationlevel-pup p.subhead,
+    .educationlevel-adamson p.subhead {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* List Content */
+    .educationlist {
+        font-size: 0.72rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Award Button Container */
+    .latinaward {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .latinaward .btn-primary {
+        width: 100%;
+        max-width: 220px;
+        text-align: center;
+    }
+}
+
+#toolsskills {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#toolsskills h2.sectionhead {
+    max-width: 1250px;
+    /* padding-left: 5rem; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toolssection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;         /* Allows rows to wrap naturally */
+    justify-content: center; /* Centers rows that have fewer cards (like a lone card on the last row) */
+    gap: 2rem;               /* Spacing between the cards */
+    width: 100%;
+    max-width: 1500px;
+    margin: 2rem auto 3rem;
+}
+
+.tools {
+    background: #363636;
+    /* border: 1px solid #e5e7eb; */
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    
+    /* Flex-grow & shrink: makes cards in the same row share the space equally, 
+       with a base starting size of 450px before wrapping */
+    flex: 0 1 auto;
+}
+
+.tools-programming {
+    /* Takes up 50% of the container minus half of the 2rem gap */
+    width: 45.2%
+}
+
+.tools-markup {
+    /* Takes up 25% of the container minus a portion of the gap */
+    width: 24%
+}
+
+.tools-database {
+    /* Takes up 25% of the container minus a portion of the gap */
+    width: 26%
+}
+
+
+/* --- ROW 2: Two cards splitting the width --- */
+
+.tools-development {
+    /* Exactly 50% width to match the Programming card above it */
+    width: 40.5%
+}
+
+.tools-multimedia {
+    /* Exactly 50% width to match Markup + Database combined width above it */
+    width: 57.1%
+}
+
+.tools-productivity {
+    width: 100%;
+}
+
+.tools-skills {
+    width: 100%;
+}
+
+.tools h3 {
+    font-size: 1.5rem;
+    color: #ffb700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.tools-row {
+    display: flex;
+    flex-wrap: wrap;       /* Wraps to the next line automatically if there are too many */
+    gap: 2.5rem;           /* Space between each language item */
+    align-items: center;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centers the image and text horizontally */
+    text-align: center;
+}
+
+.tool-item img {
+    width: 100px;           /* Adjust size as needed (e.g., 60px or 80px) */
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0.5rem; /* Space between logo and text name */
+}
+
+.tool-item p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    /* --- Tools & Skills Section Responsiveness --- */
+    #toolsskills {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    #toolsskills h2.sectionhead {
+        font-size: 1.75rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Stack category rows vertically */
+    .toolssection {
+        flex-direction: column;
+        gap: 1.25rem;
+        margin: 1.5rem auto;
+    }
+
+    /* Force all tool category cards to take full width on mobile */
+    .tools,
+    .tools-programming,
+    .tools-markup,
+    .tools-database,
+    .tools-development,
+    .tools-multimedia,
+    .tools-productivity,
+    .tools-skills {
+        width: 100% !important;
+        padding: 1.5rem 1rem;
+    }
+
+    .tools h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Adjust spacing inside logo rows */
+    .tools-row {
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    /* Scale tool item logos slightly for mobile balance */
+    .tool-item img {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 0.35rem;
+    }
+
+    .tool-item p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Desktop Contact Styling */
+.contact-details {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-item {
+    display: inline;
+}
+
+.divider {
+    display: inline;
+    margin: 0 0.5rem;
+    color: #ffb700; /* Optional: gives dividers a nice yellow pop */
+}
+
+@media (max-width: 768px) {
+    /* --- Contact / Footer Section Responsiveness --- */
+    #contact {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #contact h2.sectionhead {
+        font-size: 1.75rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Stack each contact item vertically on mobile */
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.95rem;
+        margin-top: 1rem;
+    }
+
+    /* Hide the horizontal line separators on mobile */
+    .divider {
+        display: none;
+    }
+
+    .contact-item {
+        display: block;
+        white-space: nowrap; /* Prevents phone numbers from breaking mid-digit */
+    }
+}
