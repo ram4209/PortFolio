@@ -11,14 +11,13 @@
     <header class="navbar">
         <nav>
             <a href="#main" class="name">Abram S. Alfaro</a>
-
-            <!-- Hamburger Toggle Button -->
+            <!-- Hamburger Navigation Button (for Mobile View) -->
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
+            <!-- Navigation Buttons -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Academic Projects</a></li>
@@ -31,13 +30,12 @@
     </header>
 
     <main>
+        <!-- Introductory Section -->
         <section id="main" class="section">
             <div class="hero-content">
-                <!-- Left side: Picture -->
                 <div class="hero-image">
                     <img src="abram.jpg" alt="Abram Alfaro Portrait">
                 </div>
-                <!-- Right side: Text -->
                 <div class="hero-text">
                     <h1 class="heroname">Abram S. Alfaro</h1>
                     <h3 class="herolatin">Magna Cum Laude Graduate</h3>
@@ -52,7 +50,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- About Section -->
         <section id="about" class="section">
             <h2 class="sectionhead">About Me</h2>
             <p class="abouttext">I'm a Magna Cum Laude Computer Science graduate from the Polytechnic University of the Philippines (PUP), 
@@ -60,6 +58,7 @@
                 I've gained hands-on experience in programming, database management, and algorithm design. As a DOST-SEI RA 7687 scholar, 
                 I'm committed to continuous learning and building practical, user-focused solutions.
             </p>
+            <!-- What I Bring Sub-section -->
             <div class="bringheader">
                 <h3>What I Bring</h3>
             </div>
@@ -92,16 +91,12 @@
                 </div>
             </div>
         </section>
-
+        <!-- Academic Projects Section -->
         <section id="projects" class="section">
             <h2 class="sectionhead">Academic Projects</h2>
             <div class="projects-carousel-wrapper">
-                <!-- Left Arrow Button -->
                 <button class="carousel-btn prev-btn" onclick="scrollProjects(-1)">&#10094;</button>
-                
-                <!-- Horizontal Scroll Track -->
                 <div class="projects-track" id="projectsTrack">
-                    
                     <!-- Project 1: Thesis -->
                     <div class="project-card full-slide">
                         <div class="project-info">
@@ -126,7 +121,6 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/ya9nOiiqXz4?si=HMAjzhngvk6vbm8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-
                     <!-- Project 2: JARGEN -->
                     <div class="project-card full-slide">
                         <div class="project-info">
@@ -147,7 +141,6 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/tXiwYV4D1j8?si=9huHOYMD-teIspwD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-
                     <!-- Project 3: SSS Database -->
                     <div class="project-card full-slide">
                         <div class="project-info">
@@ -168,7 +161,6 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/IxhCi1gwdGs?si=t_3bgHAV8MjgZq1x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-
                     <!-- Project 4: BagEats  -->
                     <div class="project-card full-slide">
                         <div class="project-info">
@@ -190,7 +182,6 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/KObeKxzKgTk?si=VIRYUtyYU2PdEAkR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-
                     <!-- Project 5: Bato-Bato Pick   -->
                     <div class="project-card full-slide">
                         <div class="project-info">
@@ -212,7 +203,6 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/cnmkne8rqoc?si=w4WaohcCGqHlDXBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-
                     <!-- Project 6: OOPtify    -->
                     <div class="project-card full-slide">
                         <div class="project-info">
@@ -235,12 +225,10 @@
                     </div>
 
                 </div>
-
-                <!-- Right Arrow Button -->
                 <button class="carousel-btn next-btn" onclick="scrollProjects(1)">&#10095;</button>
             </div>
         </section>
-
+        <!-- Professional Experience Section -->
         <section id="experience" class="section">
             <h2 class="sectionhead">Professional Experience</h2>
             <div class="projects-carousel-wrapper">
@@ -269,10 +257,11 @@
                 </div>
             </div>    
         </section>
-
+        <!-- Educational Background Section -->
         <section id="education" class="section">
             <h2 class="sectionhead">Educational Background</h2>
             <div class="educationsection">
+                <!-- PUP Sub-section -->
                 <div class="educationlevel-pup">
                     <div class="schoollogo">
                         <img src="PUP.png" alt="PUP Logo">
@@ -290,7 +279,7 @@
                         <a href="https://drive.google.com/file/d/11dbIzyr0AHGdiEXks3K3xeB5__Imkvur/view?usp=sharing" target="_blank" class="btn-primary">Latin Award</a>
                     </div>
                 </div>
-
+                <!-- Adamson Sub-section -->
                 <div class="educationlevel-adamson">
                     <div class="schoollogo">
                         <img src="Adamson.png" alt="Adamson University Logo">
@@ -305,10 +294,11 @@
                 </div>
             </div>
         </section>
-
+        <!-- Tools and Skills Section -->
         <section id="toolsskills" class="section">
             <h2 class="sectionhead">Tools & Skills</h2>
             <div class="toolssection">
+                <!-- Tools Section -->
                 <div class="tools tools-programming">
                     <h3>Programming Languages</h3>
                     <div class="tools-row">
@@ -443,7 +433,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Skills Section -->
             <div class="toolssection">
                 <div class="tools tools-skills">
                     <h3>Soft Skills</h3>
@@ -483,7 +473,7 @@
 
         </section>
     </main>
-
+    <!-- Contacts Section -->
     <footer id="contact" class="section">
         <h2 class="sectionhead">Let's Connect</h2>
         <p class="contact-details">
@@ -496,23 +486,21 @@
     </footer>
 
     <script>
+    // Academic Projects Carousel
     function updateCarouselHeight() {
         const track = document.getElementById('projectsTrack');
         const slides = track.querySelectorAll('.project-card.full-slide');
         
-        // Only run dynamic height logic on mobile view (max-width: 768px)
         if (window.innerWidth <= 768) {
-            // Find which slide is currently most visible in view
             slides.forEach(slide => {
                 const rect = slide.getBoundingClientRect();
                 const trackRect = track.getBoundingClientRect();
-                // Check if the slide is roughly centered in the carousel view
                 if (rect.left >= trackRect.left - 50 && rect.left < trackRect.left + trackRect.width / 2) {
                     track.style.height = slide.offsetHeight + 'px';
                 }
             });
         } else {
-            track.style.height = 'auto'; // Reset for desktop
+            track.style.height = 'auto';
         }
     }
 
@@ -524,18 +512,16 @@
             behavior: 'smooth'
         });
         
-        // Delay height adjustment slightly to let the smooth scroll finish positioning
         setTimeout(updateCarouselHeight, 350);
     }
 
-    // Recalculate on load, resize, or manual scroll/swipe
     window.addEventListener('load', updateCarouselHeight);
     window.addEventListener('resize', updateCarouselHeight);
     document.getElementById('projectsTrack').addEventListener('scroll', () => {
         requestAnimationFrame(updateCarouselHeight);
     });
 
-    // 2. Responsive Hamburger Menu Functionality
+    // Responsive Hamburger Navigation Button
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 

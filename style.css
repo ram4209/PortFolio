@@ -1,9 +1,7 @@
-/* 1. Make the scrolling smooth across the entire page */
 html {
     scroll-behavior: smooth;
 }
 
-/* Reset basic margins */
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +14,12 @@ body {
     background-color: #000000;
 }
 
-/* 2. Style and stick the Navigation Bar to the top horizontally */
+/* Navigation Buttons Design */
 .navbar {
     position: sticky;
     top: 0;
     background-color: #ffb700;
-    /* border-bottom: 1px solid #ddd; */
-    z-index: 1000; /* Keeps the navbar on top of other elements when scrolling */
+    z-index: 1000;
 }
 
 .navbar nav {
@@ -45,7 +42,6 @@ body {
     color: #ffffff;
 }
 
-/* Make the list items align horizontally using Flexbox */
 .nav-links {
     display: flex;
     list-style: none;
@@ -56,17 +52,16 @@ body {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
-    padding: 0.5rem 0.5rem; /* Adds breathing room around the text */
-    border-radius: 4px;   /* Rounds the corners of the background */
-    transition: color 0.2s ease, background-color 0.2s ease; /* Makes the transition smooth */
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #ffb700; /* Darkens text slightly when hovered */
-    background-color: #000000;    /* Light gray background color on hover */
+    color: #ffb700;
+    background-color: #000000;
 }
 
-/* --- Hamburger Button Styles (Hidden on Desktop) --- */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -88,14 +83,14 @@ body {
     transition: all 0.3s ease;
 }
 
-/* --- Mobile View Media Query --- */
+/* Navigation Buttons (Mobile View Design) */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex; /* Show hamburger button on mobile */
+        display: flex;
     }
 
     .nav-links {
-        display: none; /* Hide links by default on mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -108,15 +103,13 @@ body {
         gap: 1.5rem;
     }
 
-    /* Class added via JavaScript to show the menu */
     .nav-links.active {
         display: flex; 
     }
 }
 
-/* 3. Give sections height so you can see the scrolling effect */
+/* Section Design */
 .section {
-    /* padding: 5rem 2rem; */
     scroll-margin-top: 85px;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -134,29 +127,26 @@ body {
     text-align: center;
 }
 
+/* Introductory Section Design */
 #main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh; /* Forces each section to take up full screen height */
+    min-height: 100vh;
 }
 
-/* Layout for the Hero content (Text + Image side-by-side) */
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;              /* Adjust this gap to control space between image & text */
-    /* max-width: 1100px;      Ensures it stays within a neat container */
-    margin: 0 auto;         /* Centers the entire block horizontally */
-    /* width: 100%; */
+    gap: 4rem;
+    margin: 0 auto;
 }
 
 .hero-text {
-    flex: 1; /* Takes up available space */
+    flex: 1;
 }
 
-/* Make your name large and prominent */
 .heroname {
     font-size: 4rem;
     font-weight: 800;
@@ -165,15 +155,13 @@ body {
     line-height: 1.1;
 }
 
-/* Make "Magna Cum Laude" stand out */
 .herolatin {
     font-size: 1.85rem;
     font-weight: 750;
-    color: #ffb700; /* Optional: gives it a nice professional blue accent, or change to #333 for dark text */
+    color: #ffb700;
     margin-bottom: 0.25rem;
 }
 
-/* Degree subtitle */
 .herodegree {
     font-size: 1.1rem;
     font-weight: 600;
@@ -181,21 +169,19 @@ body {
     margin-bottom: 0.15rem;
 }
 
-/* School text */
 .heroschool {
     font-size: 1rem;
     color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
-/* Styling for your profile picture */
 .hero-image img {
-    width: 400px;          /* Sets the width of the image */
-    height: 450px;         /* Sets the height to match for a circle */
-    object-fit: cover;     /* Prevents the image from looking stretched */
-    border-radius: 20%;    /* Turns the image into a perfect circle */
-    border: 4px solid #fff;/* Optional: Adds a white border ring */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-buttons {
@@ -216,32 +202,30 @@ body {
     color: #ffb700;
 }
 
+/* Introductory Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- Main/Hero Section Responsiveness --- */
     .section#main {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        min-height: auto; /* Allows height to adapt naturally on mobile */
+        min-height: auto;
     }
 
     .hero-content {
-        flex-direction: column; /* Stacks image on top, text underneath */
-        text-align: center;      /* Centers text for a balanced mobile hero */
-        gap: 2rem;               /* Reduces space between image and text */
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
     }
 
-    /* Profile Image Adjustments */
     .hero-image img {
-        width: 220px;            /* Scaled down for smaller phone screens */
+        width: 220px;
         height: 220px;
-        border-radius: 50%;      /* Perfect circular shape for mobile profile */
+        border-radius: 50%;
     }
 
-    /* Hero Text & Typography Adjustments */
     .heroname {
-        font-size: 2.25rem;      /* Scaled down from 4rem so it doesn't overflow */
+        font-size: 2.25rem;
         line-height: 1.2;
     }
 
@@ -258,20 +242,19 @@ body {
         margin-bottom: 1.25rem;
     }
 
-    /* Hero Buttons Adjustments */
     .hero-buttons {
-        justify-content: center; /* Centers buttons horizontally */
+        justify-content: center;
         gap: 0.75rem;
     }
 
     .hero-buttons .btn-primary {
-        width: 100%;             /* Optional: Full-width buttons for easy tapping */
+        width: 100%;
         max-width: 280px;
         text-align: center;
     }
 }
 
-/* Primary Button Style (Solid fill) */
+/* Primary Buttons Design */
 .btn-primary {
     background-color: #ffb700;
     color: #000000;
@@ -287,6 +270,7 @@ body {
     color: #ffb700;
 }
 
+/* About Section Design */
 #about {
     max-width: 1500px;
     margin: 0 auto;
@@ -303,13 +287,11 @@ body {
 #about h3 {
     font-size: 1.5rem;
     color: #ffb700;
-    /* margin-bottom: 0.5rem; */
     text-align: center;
 }
 
 .bringheader {
     background-color: #363636;
-    /* border: 1px solid #ffb700; */
     padding: .5rem .5rem;
     width: 32%;
     border-radius: 4px;
@@ -318,19 +300,18 @@ body {
 
 .whatibring {
     position: relative;
-    display: flex;         /* Places children side-by-side */
-    gap: 2rem;             /* Adds spacing between the two cards */
+    display: flex;
+    gap: 2rem;
     width: 100%;
     max-width: 1350px;
     margin: 2rem auto 0;
 }
 
 .bringcard {
-    flex: 1;               /* Makes both cards share the row equally (50% each) */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Stacks content inside the card vertically (title -> text -> button) */
+    flex-direction: column;
     background: #363636;
-    /* border: 1px solid #e5e7eb; */
     border-radius: 12px;
     padding: 2.5rem;
     box-sizing: border-box;
@@ -352,20 +333,20 @@ body {
 
 .cardlogo {
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
+    justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: .75rem;   /* Adds breathing room below the logo */
+    margin-bottom: .75rem;
 }
 
 .cardlogo img {
-    width: 100px;          /* Sets the width of the image */
-    height: 100px;         /* Sets the height to match for a circle */
-    object-fit: contain;     /* Prevents the image from looking stretched */
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
+/* About Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- About Me Section Responsiveness --- */
     #about {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -373,17 +354,16 @@ body {
     }
 
     .abouttext {
-        font-size: 1rem;       /* Slightly smaller text for comfortable mobile reading */
+        font-size: 1rem;
         line-height: 1.6;
-        text-align: center;   /* Or keep text-align: center based on your preference */
+        text-align: center;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
     }
 
-    /* "What I Bring" Subtitle Box */
     .bringheader {
-        width: 100%;           /* Allows header banner to scale naturally on phones */
-        max-width: 280px;      /* Keeps it neat and centered */
+        width: 100%;
+        max-width: 280px;
         margin: 0 auto;
     }
 
@@ -391,15 +371,14 @@ body {
         font-size: 1.25rem;
     }
 
-    /* "What I Bring" Cards Container */
     .whatibring {
-        flex-direction: column; /* Stacks the three cards vertically */
-        gap: 1.25rem;           /* Adds clean vertical spacing between cards */
+        flex-direction: column;
+        gap: 1.25rem;
         margin-top: 1.5rem;
     }
 
     .bringcard {
-        padding: 1.5rem;        /* Slightly reduced padding inside cards for smaller screens */
+        padding: 1.5rem;
         width: 100%;
     }
 
@@ -412,11 +391,12 @@ body {
     }
 
     .cardlogo img {
-        width: 80px;            /* Scales down icons slightly for mobile balance */
+        width: 80px;
         height: 80px;
     }
 }
 
+/* Academic Projects Section Design */
 #projects {
     max-width: 1500px;
     margin: 0 auto;
@@ -424,12 +404,10 @@ body {
 
 #projects h2.sectionhead {
     max-width: 1250px;
-    /* padding-left: 5rem; */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Carousel Wrapper */
 .projects-carousel-wrapper {
     position: relative;
     width: 100%;
@@ -437,23 +415,21 @@ body {
     margin: 2rem auto 0;
 }
 
-/* Horizontal Track */
 .projects-track {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
     width: 100%;
 }
 
 .projects-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none;
 }
 
-/* Full Width Project Cards */
 .project-card.full-slide {
-    flex: 0 0 100%; /* Force card to take up 100% of the carousel width */
+    flex: 0 0 100%;
     width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -461,13 +437,11 @@ body {
     gap: 2rem;
     align-items: center;
     background: #363636;
-    /* border: 1px solid #e5e7eb; */
     border-radius: 12px;
     padding: 2rem;
     box-sizing: border-box;
 }
 
-/* Left side: Project Text */
 .project-info {
     flex: 1;
 }
@@ -508,12 +482,11 @@ body {
     margin-right: 1rem;
 }
 
-/* Right side: Embedded Video Container */
 .project-video {
     flex: 1.2;
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Maintains standard widescreen video ratio */
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -525,7 +498,6 @@ body {
     border: none;
 }
 
-/* Arrow Styling */
 .carousel-btn {
     background-color: #ffb700;
     border: 1px solid #000000;
@@ -560,8 +532,8 @@ body {
     right: -24px;
 }
 
+/* Academic Projects Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- Academic Projects Section Responsiveness --- */
     #projects {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -572,11 +544,10 @@ body {
         margin-top: 1.5rem;
     }
 
-    /* Allow track height to transition smoothly when switching cards */
     .projects-track {
         align-items: flex-start;
         transition: height 0.3s ease; 
-        overflow-y: hidden; /* Prevents unwanted inner vertical scrollbars */
+        overflow-y: hidden;
     }
 
     #projects h2.sectionhead {
@@ -589,13 +560,12 @@ body {
         margin-top: 1.5rem;
     }
 
-    /* Stack project info and video vertically on mobile */
     .project-card.full-slide {
         flex: 0 0 100%;
         flex-direction: column;
         gap: 1.25rem;
         padding: 1.25rem;
-        height: auto; /* Lets each card adjust height naturally */
+        height: auto;
     }
 
     .project-info h3 {
@@ -609,19 +579,18 @@ body {
     .project-info p, 
     .bulletlist {
         font-size: 0.9rem;
-        text-align: justify;       /* Left-aligned is easier to read on narrow phone displays */
+        text-align: justify;
     }
 
     .bulletlist {
-        padding-left: 1.25rem;  /* Prevents bullet points from pushing off-screen */
+        padding-left: 1.25rem;
         margin-bottom: 1.25rem;
     }
 
-    /* 1. Make this a relative container so absolute children stay inside */
     .project-video {
         order: 1;
         width: 100%;
-        flex: none;             /* Removes desktop flex sizing */
+        flex: none;
     }
 
     .project-info {
@@ -636,22 +605,21 @@ body {
     }
 
     .project-links a {
-        margin-right: 0; /* Clear desktop right margin */
+        margin-right: 0;
         width: 100%;
         max-width: 250px;
         text-align: center;
     }
 
-    /* Adjust Carousel Navigation Buttons for Mobile */
     .carousel-btn {
-        width: 36px;            /* Slightly smaller touch target for mobile */
+        width: 36px;
         height: 36px;
         font-size: 1rem;
         top: 40%;
     }
 
     .prev-btn {
-        left: -10px;            /* Pulls arrows slightly closer so they don't clip off small viewports */
+        left: -10px;
     }
 
     .next-btn {
@@ -659,6 +627,7 @@ body {
     }
 }
 
+/* Professional Experience Section Design */
 #experience {
     max-width: 1500px;
     margin: 0 auto;
@@ -666,13 +635,12 @@ body {
 
 #experience h2.sectionhead {
     max-width: 1250px;
-    /* padding-left: 5rem; */
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Professional Experience Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- Professional Experience Section Responsiveness --- */
     #experience {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -685,7 +653,6 @@ body {
         margin-right: 0;
     }
 
-    /* Target the experience card container */
     #experience .project-card.full-slide {
         flex-direction: column;
         gap: 1.25rem;
@@ -693,7 +660,6 @@ body {
         height: auto;
     }
 
-    /* Video reordering for Experience (places video right below the main info header) */
     #experience .project-video {
         order: 1;
         width: 100%;
@@ -726,7 +692,6 @@ body {
         margin-bottom: 1.25rem;
     }
 
-    /* Align action buttons neatly on mobile */
     #experience .project-links {
         display: flex;
         flex-wrap: wrap;
@@ -735,13 +700,14 @@ body {
     }
 
     #experience .project-links a {
-        margin-right: 0; /* Clear desktop right margin */
+        margin-right: 0;
         width: 100%;
         max-width: 250px;
         text-align: center;
     }
 }
 
+/* Educational Background Section Design */
 #education {
     max-width: 1500px;
     margin: 0 auto;
@@ -749,22 +715,20 @@ body {
 
 .educationsection {
     position: relative;
-    display: flex;         /* Places children side-by-side */
-    gap: 2rem;             /* Adds spacing between the two cards */
+    display: flex;
+    gap: 2rem;
     width: 100%;
     max-width: 1350px;
     margin: 2rem auto 0;
 }
 
 .educationlevel-pup {
-    flex: 1;               /* Makes both cards share the row equally (50% each) */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Stacks content inside the card vertically (title -> text -> button) */
-    /* justify-content: space-between; Pushes buttons to the bottom evenly */
+    flex-direction: column;
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('pupcampus.jpg');
     background-size: cover;
     background-position: center;
-    /* border: 1px solid #e5e7eb; */
     border-radius: 12px;
     padding: 2.5rem;
     box-sizing: border-box;
@@ -786,14 +750,12 @@ body {
 }
 
 .educationlevel-adamson {
-    flex: 1;               /* Makes both cards share the row equally (50% each) */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Stacks content inside the card vertically (title -> text -> button) */
-    /* justify-content: space-between; Pushes buttons to the bottom evenly */
+    flex-direction: column;
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('adamsoncampus.jpg');
     background-size: cover;
     background-position: center;
-    /* border: 1px solid #e5e7eb; */
     border-radius: 12px;
     padding: 2.5rem;
     box-sizing: border-box;
@@ -829,20 +791,20 @@ body {
 
 .schoollogo {
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
+    justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 1.5rem;   /* Adds breathing room below the logo */
+    margin-bottom: 1.5rem;
 }
 
 .schoollogo img {
-    width: 200px;          /* Sets the width of the image */
-    height: 200px;         /* Sets the height to match for a circle */
-    object-fit: contain;     /* Prevents the image from looking stretched */
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
+/* Educational Background Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- Educational Background Section Responsiveness --- */
     #education {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -855,27 +817,23 @@ body {
         margin-right: 0;
     }
 
-    /* Stack PUP and Adamson cards vertically */
     .educationsection {
         flex-direction: column;
         gap: 1.5rem;
         margin-top: 1.5rem;
     }
 
-    /* Card Padding & Sizing */
     .educationlevel-pup,
     .educationlevel-adamson {
         padding: 1.75rem 1.25rem;
         width: 100%;
     }
 
-    /* School Logo Scaling */
     .schoollogo img {
         width: 120px;
         height: 120px;
     }
 
-    /* Headings & Subheads */
     .educationlevel-pup h3,
     .educationlevel-adamson h3 {
         font-size: 1.25rem;
@@ -887,14 +845,12 @@ body {
         margin-bottom: 0.75rem;
     }
 
-    /* List Content */
     .educationlist {
         font-size: 0.72rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
     }
 
-    /* Award Button Container */
     .latinaward {
         display: flex;
         justify-content: center;
@@ -908,6 +864,7 @@ body {
     }
 }
 
+/* Tools and Skills Section Design */
 #toolsskills {
     max-width: 1500px;
     margin: 0 auto;
@@ -915,7 +872,6 @@ body {
 
 #toolsskills h2.sectionhead {
     max-width: 1250px;
-    /* padding-left: 5rem; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -923,9 +879,9 @@ body {
 .toolssection {
     position: relative;
     display: flex;
-    flex-wrap: wrap;         /* Allows rows to wrap naturally */
-    justify-content: center; /* Centers rows that have fewer cards (like a lone card on the last row) */
-    gap: 2rem;               /* Spacing between the cards */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     width: 100%;
     max-width: 1500px;
     margin: 2rem auto 3rem;
@@ -933,41 +889,29 @@ body {
 
 .tools {
     background: #363636;
-    /* border: 1px solid #e5e7eb; */
     border-radius: 12px;
     padding: 2.5rem;
     box-sizing: border-box;
-    
-    /* Flex-grow & shrink: makes cards in the same row share the space equally, 
-       with a base starting size of 450px before wrapping */
     flex: 0 1 auto;
 }
 
 .tools-programming {
-    /* Takes up 50% of the container minus half of the 2rem gap */
     width: 45.2%
 }
 
 .tools-markup {
-    /* Takes up 25% of the container minus a portion of the gap */
     width: 24%
 }
 
 .tools-database {
-    /* Takes up 25% of the container minus a portion of the gap */
     width: 26%
 }
 
-
-/* --- ROW 2: Two cards splitting the width --- */
-
 .tools-development {
-    /* Exactly 50% width to match the Programming card above it */
     width: 40.5%
 }
 
 .tools-multimedia {
-    /* Exactly 50% width to match Markup + Database combined width above it */
     width: 57.1%
 }
 
@@ -988,8 +932,8 @@ body {
 
 .tools-row {
     display: flex;
-    flex-wrap: wrap;       /* Wraps to the next line automatically if there are too many */
-    gap: 2.5rem;           /* Space between each language item */
+    flex-wrap: wrap;
+    gap: 2.5rem;
     align-items: center;
     margin-top: 1.5rem;
     justify-content: center;
@@ -998,15 +942,15 @@ body {
 .tool-item {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* Centers the image and text horizontally */
+    align-items: center;
     text-align: center;
 }
 
 .tool-item img {
-    width: 100px;           /* Adjust size as needed (e.g., 60px or 80px) */
+    width: 100px;
     height: 100px;
     object-fit: contain;
-    margin-bottom: 0.5rem; /* Space between logo and text name */
+    margin-bottom: 0.5rem;
 }
 
 .tool-item p {
@@ -1016,8 +960,8 @@ body {
     margin: 0;
 }
 
+/* Tools and Skills Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- Tools & Skills Section Responsiveness --- */
     #toolsskills {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -1030,14 +974,12 @@ body {
         margin-right: 0;
     }
 
-    /* Stack category rows vertically */
     .toolssection {
         flex-direction: column;
         gap: 1.25rem;
         margin: 1.5rem auto;
     }
 
-    /* Force all tool category cards to take full width on mobile */
     .tools,
     .tools-programming,
     .tools-markup,
@@ -1054,13 +996,11 @@ body {
         font-size: 1.25rem;
     }
 
-    /* Adjust spacing inside logo rows */
     .tools-row {
         gap: 1.5rem;
         margin-top: 1rem;
     }
 
-    /* Scale tool item logos slightly for mobile balance */
     .tool-item img {
         width: 65px;
         height: 65px;
@@ -1072,7 +1012,7 @@ body {
     }
 }
 
-/* Desktop Contact Styling */
+/* Contacts Section Design */
 .contact-details {
     font-size: 1.1rem;
     color: #ffffff;
@@ -1088,11 +1028,11 @@ body {
 .divider {
     display: inline;
     margin: 0 0.5rem;
-    color: #ffb700; /* Optional: gives dividers a nice yellow pop */
+    color: #ffb700;
 }
 
+/* Contacts Section (Mobile View Design) */
 @media (max-width: 768px) {
-    /* --- Contact / Footer Section Responsiveness --- */
     #contact {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -1105,7 +1045,6 @@ body {
         margin-right: 0;
     }
 
-    /* Stack each contact item vertically on mobile */
     .contact-details {
         display: flex;
         flex-direction: column;
@@ -1115,13 +1054,12 @@ body {
         margin-top: 1rem;
     }
 
-    /* Hide the horizontal line separators on mobile */
     .divider {
         display: none;
     }
 
     .contact-item {
         display: block;
-        white-space: nowrap; /* Prevents phone numbers from breaking mid-digit */
+        white-space: nowrap;
     }
 }
